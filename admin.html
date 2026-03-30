@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#ffffff",
+              "outline": "#767c79",
+              "on-primary-fixed-variant": "#5c5b58",
+              "inverse-surface": "#0c0f0e",
+              "secondary-fixed-dim": "#d5d4d0",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#46453e",
+              "on-primary-fixed": "#403f3c",
+              "secondary-fixed": "#e4e2de",
+              "on-secondary-fixed": "#3f403c",
+              "surface-container-high": "#e5e9e6",
+              "surface": "#f9f9f7",
+              "secondary": "#5f5f5c",
+              "on-error": "#fff7f6",
+              "surface-dim": "#d4dcd8",
+              "on-tertiary-fixed-variant": "#63615a",
+              "primary": "#5f5e5b",
+              "tertiary-container": "#efebe1",
+              "on-surface-variant": "#5a605e",
+              "error": "#9e422c",
+              "on-tertiary-container": "#585750",
+              "surface-container-low": "#f2f4f2",
+              "on-secondary-fixed-variant": "#5b5c58",
+              "surface-bright": "#f9f9f7",
+              "on-error-container": "#742410",
+              "surface-variant": "#dee4e0",
+              "on-surface": "#2d3432",
+              "surface-tint": "#5f5e5b",
+              "tertiary": "#615f58",
+              "tertiary-dim": "#55534c",
+              "outline-variant": "#adb3b0",
+              "surface-container-highest": "#dee4e0",
+              "on-tertiary": "#fdf8ef",
+              "primary-fixed-dim": "#d6d4cf",
+              "on-background": "#2d3432",
+              "inverse-on-surface": "#9c9d9b",
+              "surface-container": "#ecefec",
+              "error-dim": "#5c1202",
+              "error-container": "#fe8b70",
+              "background": "#f9f9f7",
+              "primary-fixed": "#e5e2dd",
+              "primary-container": "#e5e2dd",
+              "secondary-container": "#e4e2de",
+              "primary-dim": "#53524f",
+              "on-secondary": "#faf9f4",
+              "on-primary": "#faf7f2",
+              "on-primary-container": "#52524e",
+              "tertiary-fixed": "#efebe1",
+              "on-secondary-container": "#51524f",
+              "tertiary-fixed-dim": "#e0dcd4",
+              "secondary-dim": "#535350"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen">
+<!-- Component: SideNavBar -->
+<!-- API Reference: GET /api/navigation/sidebar -->
+<aside class="fixed left-0 top-0 h-full w-64 z-50 bg-[#f2f4f2] dark:bg-stone-950 flex flex-col py-8 px-4 gap-y-6" style="box-shadow: 20px 0 50px rgba(45,52,50,0.02)">
+<div class="px-4 mb-8">
+<h1 class="font-serif text-xl tracking-widest text-[#2D2D2A] dark:text-stone-50">Atelier Estate</h1>
+<p class="font-sans text-[10px] tracking-widest uppercase text-stone-500 mt-1">Luxury CMS v1.0</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-200/50 dark:hover:bg-stone-900/50 transition-all duration-500 font-sans text-sm tracking-wide uppercase group" href="#">
+<span class="material-symbols-outlined transition-transform duration-300 group-active:translate-x-1" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 bg-white dark:bg-stone-800 text-[#2D2D2A] dark:text-white shadow-sm border-r-2 border-stone-900 dark:border-stone-100 font-sans text-sm tracking-wide uppercase group" href="#">
+<span class="material-symbols-outlined transition-transform duration-300 group-active:translate-x-1" data-icon="domain">domain</span>
+<span>Properties</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-200/50 dark:hover:bg-stone-900/50 transition-all duration-500 font-sans text-sm tracking-wide uppercase group" href="#">
+<span class="material-symbols-outlined transition-transform duration-300 group-active:translate-x-1" data-icon="perm_media">perm_media</span>
+<span>Media Library</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-200/50 dark:hover:bg-stone-900/50 transition-all duration-500 font-sans text-sm tracking-wide uppercase group" href="#">
+<span class="material-symbols-outlined transition-transform duration-300 group-active:translate-x-1" data-icon="badge">badge</span>
+<span>Agents</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-200/50 dark:hover:bg-stone-900/50 transition-all duration-500 font-sans text-sm tracking-wide uppercase group" href="#">
+<span class="material-symbols-outlined transition-transform duration-300 group-active:translate-x-1" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-stone-200/20 pt-6">
+<button class="w-full bg-surface-tint text-on-primary py-4 px-6 font-sans text-xs tracking-[0.2em] uppercase mb-6 hover:opacity-90 transition-opacity">
+                New Listing
+            </button>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors font-sans text-xs tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span>Help Center</span>
+</a>
+</div>
+</aside>
+<!-- Component: TopNavBar -->
+<!-- API Reference: GET /api/user/profile, GET /api/notifications/unread -->
+<header class="fixed top-0 right-0 left-64 h-16 flex justify-between items-center px-8 bg-[#f9f9f7]/80 dark:bg-stone-900/80 backdrop-blur-md z-40 border-b border-stone-200/20">
+<div class="flex items-center gap-8">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-stone-400 text-sm" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full pl-6 font-sans text-[10px] tracking-[0.2em] uppercase placeholder-stone-400" placeholder="SEARCH ASSETS..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-stone-500 hover:text-stone-900 transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-1.5 h-1.5 bg-error rounded-full"></span>
+</button>
+<button class="text-stone-500 hover:text-stone-900 transition-colors">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</button>
+<div class="h-8 w-[1px] bg-stone-200/50 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="font-sans text-[10px] font-bold tracking-widest uppercase text-[#2D2D2A]">Admin</p>
+<p class="font-sans text-[8px] tracking-widest uppercase text-stone-400">Primary Account</p>
+</div>
+<div class="w-8 h-8 bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="Administrator Profile" class="w-full h-full object-cover" data-alt="Professional portrait of a male administrator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCKm-UQsMSglh9VM-5TQqQksTatxZhhFH5JvpquPNMz_VfEh8nMZPSXDJ6NWD_REs4eW-CuJovGgRMirpPt7qMJZqfuoJjLytqJgXOA447hLQJmGUSdY2ZDV4ZCeyBWW4wwbPKHBSpbYSM-fiq9wartmovetHQ4es_QrbsVaF4nhAbyFhX5kXhwCyVMUe7NA0AZCRE_0PIdtl_TcStwXOFpR7_iNY68YqUsF1noraaFE9WKb8VelvlixIS808jIi5XdTLjaHnOjao"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas: PropertyMediaManagement -->
+<!-- API Reference: GET /api/properties/:id, PUT /api/properties/:id -->
+<main class="pl-64 pt-16 min-h-screen">
+<div class="max-w-7xl mx-auto p-12 space-y-16">
+<!-- Component: PageHeader -->
+<section class="flex justify-between items-end border-b border-stone-200 pb-12">
+<div class="space-y-4">
+<nav class="flex gap-2 font-sans text-[10px] tracking-[0.2em] uppercase text-stone-400">
+<a class="hover:text-stone-900" href="#">Properties</a>
+<span>/</span>
+<span class="text-stone-900">Edit Asset</span>
+</nav>
+<h2 class="font-headline text-5xl font-light tracking-tighter text-[#2D2D2A]">The Obsidian Pavilion</h2>
+</div>
+<div class="flex gap-4">
+<button class="border border-outline-variant/30 px-8 py-4 font-sans text-[10px] tracking-[0.2em] uppercase hover:bg-stone-100 transition-colors">
+                        Preview Public Page
+                    </button>
+<!-- API Reference: POST /api/properties/:id/save -->
+<button class="bg-surface-tint text-on-primary px-10 py-4 font-sans text-[10px] tracking-[0.2em] uppercase hover:opacity-90 transition-opacity">
+                        Save Changes
+                    </button>
+</div>
+</section>
+<div class="grid grid-cols-12 gap-16">
+<!-- Media Section (Left Column) -->
+<div class="col-span-8 space-y-16">
+<!-- Component: MediaUploadZone -->
+<!-- API Reference: POST /api/media/upload -->
+<section class="space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="font-sans text-xs tracking-[0.2em] uppercase font-semibold">Media Assets</h3>
+<span class="font-sans text-[10px] text-stone-400 uppercase tracking-widest">12 / 50 Images used</span>
+</div>
+<div class="group border-2 border-dashed border-outline-variant/50 bg-surface-container-low h-96 flex flex-col items-center justify-center space-y-4 transition-all hover:bg-surface-container hover:border-surface-tint cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-stone-300 group-hover:text-surface-tint transition-colors" data-icon="cloud_upload">cloud_upload</span>
+<div class="text-center">
+<p class="font-sans text-xs tracking-widest uppercase text-stone-600 mb-1">Drag and drop high-res imagery</p>
+<p class="font-sans text-[10px] text-stone-400 uppercase tracking-[0.2em]">PNG, JPG or WEBP up to 20MB</p>
+</div>
+<button class="mt-4 border-b border-stone-900 font-sans text-[10px] tracking-[0.2em] uppercase text-stone-900 py-1 hover:text-stone-600 transition-colors">Browse Files</button>
+</div>
+</section>
+<!-- Component: MediaGalleryGrid -->
+<!-- API Reference: GET /api/properties/:id/media, DELETE /api/media/:id, PATCH /api/media/:id/order -->
+<section class="space-y-8">
+<div class="grid grid-cols-3 gap-8">
+<!-- Gallery Item 01 -->
+<div class="group space-y-4">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Property Exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn6qk9Z6H1mm5m6yO8qXjZnwvsPVKTsRYvQrDDoF1dUCysOAGwce9AvxzK4EuG4tBoRYoyPu14YhMSzr9xRzqXE9sBf3aBMhj4ZtU8bA9u53Djz4v5n8yN8_abh1fO37uaNYNZVXjgMjLI_wTS4-dX590XfvKAcb9Rr601m7fubAOZ2aTLweZBQTM3vdObexRFWoY_H_UR8ijzS9ekBdKywSZPI-LRiR_VWm-ikSktngt7F5kDvsOLiAl47fLtchemx3kelVA4lvM"/>
+<div class="absolute inset-0 bg-stone-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+<button class="w-10 h-10 bg-white/90 text-stone-900 flex items-center justify-center hover:bg-white" title="Drag to reorder"><span class="material-symbols-outlined text-sm" data-icon="drag_indicator">drag_indicator</span></button>
+<button class="w-10 h-10 bg-white/90 text-stone-900 flex items-center justify-center hover:bg-white" title="Remove asset"><span class="material-symbols-outlined text-sm" data-icon="delete">delete</span></button>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<button class="font-sans text-[9px] tracking-[0.2em] uppercase text-stone-500 hover:text-stone-900 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="edit_note">edit_note</span>
+                                        Add Caption
+                                    </button>
+<span class="font-sans text-[9px] tracking-[0.2em] uppercase text-stone-300">01</span>
+</div>
+</div>
+<!-- Gallery Item 02 -->
+<div class="group space-y-4">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Property Interior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgf-ONnLyawzFVxJtZ2dUsiCG-uA2CAzQDPaGd5ra8p6o07M-k50hKjD9jwECqp6zK52kNNSo_nEAjBjfy7NsHslCVX0p65R5W7aOnusWv9wPkwaYTjUOOJzOROPEJ-ToEO_aqNr_bWHfAGi8ergPW_oeaGfLa5nkjX-q234qC3_ZrANZQsymDbnAqzYZw_v-HGivdxetGfDJXEdrztlPLVjhfx0SJoWxJ3Pad8J9QnM7AiWdFXdFjxAG91hszCl8NBGO-YMd6hW0"/>
+<div class="absolute inset-0 bg-stone-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+<button class="w-10 h-10 bg-white/90 text-stone-900 flex items-center justify-center hover:bg-white" title="Drag to reorder"><span class="material-symbols-outlined text-sm" data-icon="drag_indicator">drag_indicator</span></button>
+<button class="w-10 h-10 bg-white/90 text-stone-900 flex items-center justify-center hover:bg-white" title="Remove asset"><span class="material-symbols-outlined text-sm" data-icon="delete">delete</span></button>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<button class="font-sans text-[9px] tracking-[0.2em] uppercase text-stone-500 hover:text-stone-900 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="edit_note">edit_note</span>
+                                        Add Caption
+                                    </button>
+<span class="font-sans text-[9px] tracking-[0.2em] uppercase text-stone-300">02</span>
+</div>
+</div>
+<!-- Gallery Item 03 -->
+<div class="group space-y-4">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Property Pool" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZzKqaretZITHt3XOmiaYB8y3iP8hdz2qZJ3rNfoN9HZJiMEDLYtLYT2KBZDeWZrYmWlge-CV1hR5-tBr8eKEomLP1n-L8xZwCqeM2_37u8W3JzFnIHJTJEK50MryN5WjlogtLC6WBsD8EHBOU82zpdKLmQMeTU2M3TaHtR36gWL7RSxWAMpNLmxks7AMZrYdgkbL4yHihegSyGfxTMX_xTVKGJsw0rb6fLjiJdLPYsOrePMRrCq0BAxZx0SSAjrqB576Nsa_wcZw"/>
+<div class="absolute inset-0 bg-stone-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+<button class="w-10 h-10 bg-white/90 text-stone-900 flex items-center justify-center hover:bg-white" title="Drag to reorder"><span class="material-symbols-outlined text-sm" data-icon="drag_indicator">drag_indicator</span></button>
+<button class="w-10 h-10 bg-white/90 text-stone-900 flex items-center justify-center hover:bg-white" title="Remove asset"><span class="material-symbols-outlined text-sm" data-icon="delete">delete</span></button>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<button class="font-sans text-[9px] tracking-[0.2em] uppercase text-stone-500 hover:text-stone-900 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="edit_note">edit_note</span>
+                                        Add Caption
+                                    </button>
+<span class="font-sans text-[9px] tracking-[0.2em] uppercase text-stone-300">03</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar Metadata (Right Column) -->
+<div class="col-span-4 space-y-12">
+<!-- Component: CoreMetadataForm -->
+<section class="bg-surface-container-low p-10 space-y-8">
+<h3 class="font-sans text-xs tracking-[0.2em] uppercase font-semibold">Core Metadata</h3>
+<div class="space-y-8">
+<div class="space-y-2">
+<label class="font-sans text-[9px] tracking-[0.2em] uppercase text-stone-400">Property Title</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 px-0 py-2 focus:ring-0 focus:border-stone-900 font-headline text-xl text-stone-900" type="text" value="The Obsidian Pavilion"/>
+</div>
+<div class="space-y-2">
+<label class="font-sans text-[9px] tracking-[0.2em] uppercase text-stone-400">Market Listing Price</label>
+<div class="relative">
+<span class="absolute left-0 top-1/2 -translate-y-1/2 font-sans text-stone-400 text-sm">$</span>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 pl-4 py-2 focus:ring-0 focus:border-stone-900 font-headline text-xl text-stone-900" type="text" value="12,500,000"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-sans text-[9px] tracking-[0.2em] uppercase text-stone-400">Geographic Location</label>
+<div class="flex items-center gap-2 border-b border-outline-variant/30 py-2">
+<span class="material-symbols-outlined text-sm text-stone-400" data-icon="location_on">location_on</span>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 font-headline text-xl text-stone-900" type="text" value="Reykjavik, Iceland"/>
+</div>
+</div>
+<!-- API Reference: GET /api/agents, PATCH /api/properties/:id/agent -->
+<div class="space-y-2">
+<label class="font-sans text-[9px] tracking-[0.2em] uppercase text-stone-400">Agent Assignment</label>
+<div class="flex items-center gap-4 pt-2">
+<div class="w-10 h-10 bg-stone-200">
+<img alt="Agent Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Ttcr3fvPS1yzO_vgZvp90S20PfoG2CfW-rs3Om2MOwh97jaUimGsR4vCicwqya6sNA1zQ7JeXIVO3sRiuJNHo53NZVayi7Iuf5DTII8hk-eGl9YtWwPGXtcynYBlgphxjiRGKAq3KGGTf0OWzHTBoSx7aQ_lv25fofHS-dsNcU8hmBP4qpelp-AoPh9H4ItZ_C3j49nzVgzpE_rnz6U7DGnNmOTgzlCLDXrT7whT9P0MUHGI6tk0hpOMGLY8wxL_xaGMgCPbX7s"/>
+</div>
+<div>
+<p class="font-sans text-[11px] font-bold tracking-widest uppercase">Elias Thorne</p>
+<p class="font-sans text-[9px] tracking-widest uppercase text-stone-400">Senior Partner</p>
+</div>
+<button class="ml-auto text-stone-400 hover:text-stone-900 transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="swap_horiz">swap_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Component: VisibilityInsights -->
+<!-- API Reference: GET /api/analytics/property/:id -->
+<section class="p-10 border border-outline-variant/20 space-y-6">
+<h3 class="font-sans text-xs tracking-[0.2em] uppercase font-semibold">Visibility Metrics</h3>
+<div class="flex justify-between items-end">
+<div>
+<p class="font-headline text-3xl font-light">1.2k</p>
+<p class="font-sans text-[9px] tracking-widest uppercase text-stone-400">Weekly Impressions</p>
+</div>
+<div class="text-right">
+<p class="font-headline text-3xl font-light text-primary">85%</p>
+<p class="font-sans text-[9px] tracking-widest uppercase text-stone-400">Profile Completion</p>
+</div>
+</div>
+<div class="w-full h-[2px] bg-stone-100">
+<div class="h-full bg-stone-900 w-[85%]"></div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</body></html>

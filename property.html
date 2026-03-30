@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#e5e2dd",
+              "on-background": "#2d3432",
+              "on-secondary-container": "#51524f",
+              "on-secondary-fixed-variant": "#5b5c58",
+              "tertiary-dim": "#55534c",
+              "on-secondary-fixed": "#3f403c",
+              "outline-variant": "#adb3b0",
+              "on-surface": "#2d3432",
+              "surface-container-low": "#f2f4f2",
+              "secondary-fixed": "#e4e2de",
+              "on-primary": "#faf7f2",
+              "on-tertiary-fixed-variant": "#63615a",
+              "on-secondary": "#faf9f4",
+              "primary": "#5f5e5b",
+              "on-tertiary-fixed": "#46453e",
+              "error-container": "#fe8b70",
+              "surface-container-high": "#e5e9e6",
+              "primary-fixed-dim": "#d6d4cf",
+              "surface": "#f9f9f7",
+              "surface-variant": "#dee4e0",
+              "on-surface-variant": "#5a605e",
+              "on-tertiary": "#fdf8ef",
+              "inverse-surface": "#0c0f0e",
+              "on-tertiary-container": "#585750",
+              "secondary": "#5f5f5c",
+              "surface-bright": "#f9f9f7",
+              "tertiary-container": "#efebe1",
+              "primary-fixed": "#e5e2dd",
+              "tertiary-fixed": "#efebe1",
+              "inverse-on-surface": "#9c9d9b",
+              "error-dim": "#5c1202",
+              "inverse-primary": "#ffffff",
+              "surface-dim": "#d4dcd8",
+              "on-error-container": "#742410",
+              "error": "#9e422c",
+              "secondary-container": "#e4e2de",
+              "primary-dim": "#53524f",
+              "surface-container": "#ecefec",
+              "outline": "#767c79",
+              "tertiary": "#615f58",
+              "on-primary-fixed": "#403f3c",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#5c5b58",
+              "secondary-dim": "#535350",
+              "surface-container-highest": "#dee4e0",
+              "surface-tint": "#5f5e5b",
+              "background": "#f9f9f7",
+              "on-primary-container": "#52524e",
+              "tertiary-fixed-dim": "#e0dcd4",
+              "on-error": "#fff7f6",
+              "secondary-fixed-dim": "#d5d4d0"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .ghost-border { outline: 1px solid rgba(173, 179, 176, 0.2); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="font-serif text-2xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">MONOLITH</div>
+<nav class="hidden md:flex gap-12 items-center">
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300" href="#">Home</a>
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-900 dark:text-zinc-50 border-b border-zinc-900 dark:border-zinc-50 pb-1" href="#">Properties</a>
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300" href="#">About</a>
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4 text-zinc-900 dark:text-zinc-50">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity duration-500">search</span>
+<span class="material-symbols-outlined md:hidden">menu</span>
+</div>
+</div>
+<div class="bg-zinc-100 dark:bg-zinc-800 h-[1px] w-full"></div>
+</header>
+<main class="pt-24 pb-20">
+<!-- Dynamic Gallery Section -->
+<section class="px-8 max-w-screen-2xl mx-auto mb-16">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+<div class="lg:col-span-3 aspect-[16/9] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern minimalist architectural villa exterior with large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSoLbd4ENrk1FnMVGvX_kls_h_L1XKQOkIcoF_qoB6zgPaCcCV9RnSoH40NBJEL3_Q2X8cgZMRcuSckG6f5o1VkiCvQ4arrus31l8tU_fNszcORaf_Za4I71VsjHbpWVjZWpJKSc1CEUoO-fWl3VA2QloKLR5Tn9OMF8LrDS7yIQA2hbpzw0sPKe-6q3W2gfhUCkD9hU2OJ-6kzHL1cdf0yBPoRx91cbVGbm_Epp5phdn1iQgckFbTnOHqVVr2uUL8k2gFMFxFzLc"/>
+</div>
+<div class="hidden lg:flex flex-col gap-4 overflow-y-auto max-h-[calc(16/9*75vw/4)] no-scrollbar">
+<img class="w-full aspect-square object-cover cursor-pointer hover:opacity-80 transition-opacity" data-alt="Luxurious living room with floor to ceiling windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzMuFyzhUtW_Rx5UIvGznRUTS3fgozL36KJxcTnJgAGZkhwL0iH5xwgiRz4RjCuqINFVdFcwAmR0z0KDTa_3IXllyUpuw8T7YY_HzUGUP635m6mrU3N12dJ9G7JkCDk9-_i24l8bjBC-Urv9R7XYMNMxGbcsQDp5thebmbU-EvLxtjyPeWG7HsoA3Zr4YQqKt41YJV8_oJSJfsjsGvKP5H9Vstj20whl4KFgugswGeWc0h2k_EDsxgVm-JSxa3VkRc_WLC-LXjZpc"/>
+<img class="w-full aspect-square object-cover cursor-pointer hover:opacity-80 transition-opacity" data-alt="Sleek modern kitchen with marble island" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNEwXINv8NCGBqlIlaVEBdYaHHbFqAuh497PWrnbEX6-Vw4Zq6vpne30epZhtSq4JInCMOy4H0B7bJsdSzpFYW6MbxX0xNdW5xBvsQSErtxwGLqEXgF57ZfD2AMlsoasRQJMuuWWBCAmc85splZaEM6aeroTQfMqhc5Rw-zpdxQp0Kwi1z1JAtpRXzIG48BRqMSh280Wbfj-WlChyUy-QUr4f7WTYR4XsXM8dom6Qj9d4XNNRweP_aSERndcta3WkDBQhS_yqc8Eo"/>
+<img class="w-full aspect-square object-cover cursor-pointer hover:opacity-80 transition-opacity opacity-60" data-alt="Minimalist bedroom with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0Q5zOwEtzH4KQhjo_NgO-s-6RfyOMBb28VJUMEBk2XO3Iqz2T883tPApvqnEig9SW8r32rYusUPYB2JYl0VWpQQJ4oygwYISkRyB5y8WIjoZrQrTi3_Tdk4WiL-YeiuT33K3BPol6SnVBfAdXaqb-yzQS5xKTW7NAoM1ec1xuTuA0DVaMcTuJxqqOM2HcVlEFPYQeAG3Knweb0X5n0Hws5QZIdkVYDqd3KVLeQ8umneiJGE8CIHcBZ79Dtmnz5gNYL8sYgq5aX4s"/>
+</div>
+</div>
+<!-- Mobile Thumbnails -->
+<div class="flex lg:hidden gap-2 mt-4 overflow-x-auto no-scrollbar">
+<div class="min-w-[120px] aspect-square"><img class="w-full h-full object-cover" data-alt="Interior living space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2LKzyLvhjADiecEgQb-vD1YzwOqxhqzbsb4SB6zmRjBTpE1XZgRldb0iVoRREeyXksPJiRs3G_W8H1mxQbyJAenE7Uc9pLfrsG7KqbfWmkrO3xgePstou_71m8u2ej5mWgbLX_fR37F30XoePbIo6eZdkV6-Jjaiy9Lg1TT_tev-CkvIlElpdv9OuVT1Q-lUmGqbgBSFFaqv81U4brqKwJJXVz4I_vO1vlMTT192qs2-iWO7uF_HvEPSB2G2oGBf7WO-TvlLRENg"/></div>
+<div class="min-w-[120px] aspect-square"><img class="w-full h-full object-cover" data-alt="Kitchen detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1DfjTtOuudtb9al0ztXp2-mxvMcSBvBMeqdpIqDUryTO2XFWSEhq0r6LqRQiL5rEq8RAEoLaLoEKShilqqM8OXp8ydAxpk7bVB318RGKBfjCM9NDY6mNdbhzgfXceWBsKL0Bvir90rApP9NoDziojbz4CbUd9deBW2Nx3YInHW2yc9e1L2qXP8Fy-6hMqWWDlIPWKtl3Q03QDUSVkgl9MHPCRLuyeXBVkySVs8pCVueKh2ORlySYRJUTS4FTKfb9HRD7pGqi2pLo"/></div>
+<div class="min-w-[120px] aspect-square"><img class="w-full h-full object-cover" data-alt="Bedroom detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmfyo4w2zqtvvPxkLfmbsbT0g0xH-aMtzpCIs_L7vGb237B1023wqOVQSIjDe9I9jybQKz7HfAA6UxllKF3ic3Pq1FEv5D7xt5kubsqxdY8Frqc1-LQ4sqq9pR0qFv7OkVg92Nvv3ZsdqHnq-MtASMwzVRQP6GjAZ-4sfzp9WeONOPSY-sNDlrUNDjuyYUBUWHf2-ys5rjyxn68hRd2WNsU2iBnnh3DN0kT2NYTJ3RvQdVKa8MRkldP_vuCLwvDU1sOiNDAGSQAfE"/></div>
+</div>
+</section>
+<!-- Header Section -->
+<section class="px-8 max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start mb-20 gap-8">
+<div class="max-w-3xl">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-on-surface-variant mb-4 block">Exclusive Listing</span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter leading-tight mb-4">THE OBSIDIAN PAVILION</h1>
+<p class="font-label text-lg tracking-widest text-outline uppercase">Stockholm Archipelago, Sweden</p>
+</div>
+<div class="text-right flex flex-col items-end">
+<div class="text-3xl font-headline font-bold mb-2">€4,850,000</div>
+<div class="bg-surface-container-highest px-6 py-2 text-xs tracking-widest uppercase font-label">Active Listing</div>
+</div>
+</section>
+<!-- Main Content & Sidebar -->
+<section class="px-8 max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 mb-32">
+<!-- Left Column -->
+<div class="lg:col-span-8">
+<!-- Features Grid -->
+<div class="grid grid-cols-3 gap-8 py-12 mb-16 bg-surface-container-low px-12">
+<div class="flex flex-col items-start gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">bed</span>
+<div class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Bedrooms</div>
+<div class="text-xl font-headline font-bold">05</div>
+</div>
+<div class="flex flex-col items-start gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">bathtub</span>
+<div class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Bathrooms</div>
+<div class="text-xl font-headline font-bold">04</div>
+</div>
+<div class="flex flex-col items-start gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">square_foot</span>
+<div class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Square Meters</div>
+<div class="text-xl font-headline font-bold">420 m²</div>
+</div>
+</div>
+<!-- Long-form description -->
+<div class="mb-20">
+<h2 class="text-3xl font-headline font-bold mb-8">Architectural Philosophy</h2>
+<div class="font-body text-on-surface-variant leading-relaxed space-y-6 text-lg max-w-2xl">
+<p>Defined by a rigorous adherence to Scandinavian minimalism, The Obsidian Pavilion sits harmoniously within its rocky coastal context. The structure utilizes charred cedar cladding and expansive glass volumes to create a residence that is both a fortress of solitude and an observation deck for the surrounding Baltic Sea.</p>
+<p>The interior spaces are curated around a central monolithic fireplace, with seamless transitions between indoor living areas and cantilevered terraces. Every material—from the poured concrete floors to the custom oak cabinetry—has been selected for its longevity and tactile quality.</p>
+</div>
+</div>
+<!-- Amenities -->
+<div class="mb-20">
+<h3 class="text-xl font-headline font-bold mb-8 uppercase tracking-widest">Key Amenities</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12">
+<div class="flex items-center gap-3 py-3 border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="font-label text-sm uppercase tracking-widest">Private Shoreline Access</span>
+</div>
+<div class="flex items-center gap-3 py-3 border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="font-label text-sm uppercase tracking-widest">Geothermal Heating</span>
+</div>
+<div class="flex items-center gap-3 py-3 border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="font-label text-sm uppercase tracking-widest">Infinity Edge Saltwater Pool</span>
+</div>
+<div class="flex items-center gap-3 py-3 border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="font-label text-sm uppercase tracking-widest">Subterranean Wine Cellar</span>
+</div>
+<div class="flex items-center gap-3 py-3 border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="font-label text-sm uppercase tracking-widest">Integrated Smart Home Tech</span>
+</div>
+<div class="flex items-center gap-3 py-3 border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="font-label text-sm uppercase tracking-widest">Custom Poliform Kitchen</span>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="h-96 w-full bg-surface-container relative overflow-hidden">
+<div class="absolute inset-0 bg-zinc-200 grayscale opacity-50" data-location="Stockholm Archipelago" style="">
+<!-- Mock Map Background -->
+<div class="w-full h-full bg-[radial-gradient(#8c8c88_1px,transparent_1px)] [background-size:20px_20px] opacity-20"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="flex flex-col items-center gap-4">
+<div class="w-12 h-12 bg-primary flex items-center justify-center text-white rounded-full">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<span class="font-label text-xs uppercase tracking-widest bg-white px-4 py-2 shadow-sm">Island 42, Archipelago Central</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Contact Form -->
+<div class="lg:col-span-4">
+<div class="sticky top-32 bg-surface-container-lowest p-10 shadow-[0_20px_50px_rgba(45,52,50,0.04)]">
+<h3 class="text-2xl font-headline font-bold mb-8">Inquire Privately</h3>
+<form class="space-y-8">
+<div>
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2 block">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-2 px-0 focus:ring-0 focus:border-primary font-body text-sm placeholder:text-zinc-300" placeholder="Alexander Sterling" type="text"/>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2 block">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-2 px-0 focus:ring-0 focus:border-primary font-body text-sm placeholder:text-zinc-300" placeholder="alex@sterling.com" type="email"/>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-2 block">Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-2 px-0 focus:ring-0 focus:border-primary font-body text-sm placeholder:text-zinc-300" placeholder="I would like to arrange a private viewing..." rows="4"></textarea>
+</div>
+<button class="w-full bg-surface-tint text-on-primary py-5 font-label text-xs uppercase tracking-[0.3em] hover:bg-primary-dim transition-colors duration-500">
+                            Request Portfolio
+                        </button>
+</form>
+<div class="mt-8 pt-8 border-t border-outline-variant/20 text-center">
+<p class="font-label text-[10px] uppercase tracking-[0.1em] text-on-surface-variant">Listing Agent</p>
+<p class="font-headline text-lg font-bold mt-1">Elias Thorne</p>
+<p class="font-label text-[10px] text-outline mt-1">+46 8 123 45 67</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Perspective Peek / Related Properties Slider -->
+<section class="mb-32">
+<div class="px-8 max-w-screen-2xl mx-auto flex justify-between items-end mb-12">
+<h2 class="text-4xl font-headline font-bold tracking-tighter">THE MONOLITH COLLECTION</h2>
+<a class="font-label text-xs uppercase tracking-widest text-primary border-b border-primary pb-1" href="#">View All Properties</a>
+</div>
+<div class="flex gap-8 overflow-x-auto no-scrollbar pl-8 md:pl-[calc((100vw-1536px)/2+2rem)] pr-8">
+<!-- Related Card 1 -->
+<div class="min-w-[400px] md:min-w-[600px] group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Modern concrete villa with clean lines and dusk lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXgQU6M7PwOlwKVDT2Q6GgBhpQ8YWdsmEPYEWzzToV9Ezx6e4_llk6Kd_msVOVU1uojtitQcmcWuMERORtjB4pZNKoVEL5jUJ4FGm2gJ2RQAK6Iwnok79eCDQ_isGOCG97222ekUf8VRziZtzhiY1eogh_4oQtMuZK2q6Cop9SuzBBXH765DgbjajhyngKHR7vItB8ltbD78qXQvRcTPs3LljYzMgS17sOefFqkd9QF9baOteekCn9Bz8Jduf7uNaLDkrO1kzKQJQ"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-2xl font-headline font-bold">CEMENTUM HOUSE</h4>
+<p class="font-label text-xs uppercase tracking-widest text-outline">Zurich, Switzerland</p>
+</div>
+<span class="font-headline font-bold">€3,200,000</span>
+</div>
+</div>
+<!-- Related Card 2 -->
+<div class="min-w-[400px] md:min-w-[600px] group cursor-pointer opacity-80 hover:opacity-100 transition-opacity">
+<div class="aspect-[4/5] overflow-hidden mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist coastal home with large pool and white walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZafebow1RprBOtANukgD-IMTCZtA8Q2Y-lXkyANXfq8rR5GSFgGGdAzIgDPLhHumohgLpdOZ3lUz0WlYyAixrS1BTU-lR3kOmsDuzDU1lXX7O-JNIJcRWxGNSDxncZcIo3lZjJm0EfzoZJvsIHUjEGbqr1bzeWlibwGcRZKfcfu4s36yhPzCI8ZAMIOANHLdZyWMynb9lI2_-ZBwgykBOSD9yWRFk2QyCFtCcZlrK-AQ_JvJRNJpA5tOO8K7Gd-PCTJz0hWlLfS4"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-2xl font-headline font-bold">THE WHITE VOID</h4>
+<p class="font-label text-xs uppercase tracking-widest text-outline">Ibiza, Spain</p>
+</div>
+<span class="font-headline font-bold">€5,900,000</span>
+</div>
+</div>
+<!-- Partial Peek Card -->
+<div class="min-w-[200px] md:min-w-[300px] bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-outline opacity-30">arrow_forward</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-serif text-xl tracking-tighter text-zinc-900 dark:text-zinc-50">MONOLITH</div>
+<p class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400">Curating the world's most significant architectural residences.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<span class="font-label text-[10px] text-zinc-400 uppercase tracking-widest mb-2">Navigation</span>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Terms of Service</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Newsletter</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label text-[10px] text-zinc-400 uppercase tracking-widest mb-2">Social</span>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Instagram</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">LinkedIn</a>
+</div>
+</div>
+<div class="flex flex-col items-end justify-between">
+<p class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400 text-right">
+                    © 2024 Architectural Monolith. All rights reserved.
+                </p>
+<div class="flex gap-4 mt-8 md:mt-0">
+<div class="w-10 h-10 border border-outline-variant/30 flex items-center justify-center hover:bg-zinc-900 hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

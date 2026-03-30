@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Noto+Serif:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#e5e2dd",
+              "on-background": "#2d3432",
+              "on-secondary-container": "#51524f",
+              "on-secondary-fixed-variant": "#5b5c58",
+              "tertiary-dim": "#55534c",
+              "on-secondary-fixed": "#3f403c",
+              "outline-variant": "#adb3b0",
+              "on-surface": "#2d3432",
+              "surface-container-low": "#f2f4f2",
+              "secondary-fixed": "#e4e2de",
+              "on-primary": "#faf7f2",
+              "on-tertiary-fixed-variant": "#63615a",
+              "on-secondary": "#faf9f4",
+              "primary": "#5f5e5b",
+              "on-tertiary-fixed": "#46453e",
+              "error-container": "#fe8b70",
+              "surface-container-high": "#e5e9e6",
+              "primary-fixed-dim": "#d6d4cf",
+              "surface": "#f9f9f7",
+              "surface-variant": "#dee4e0",
+              "on-surface-variant": "#5a605e",
+              "on-tertiary": "#fdf8ef",
+              "inverse-surface": "#0c0f0e",
+              "on-tertiary-container": "#585750",
+              "secondary": "#5f5f5c",
+              "surface-bright": "#f9f9f7",
+              "tertiary-container": "#efebe1",
+              "primary-fixed": "#e5e2dd",
+              "tertiary-fixed": "#efebe1",
+              "inverse-on-surface": "#9c9d9b",
+              "error-dim": "#5c1202",
+              "inverse-primary": "#ffffff",
+              "surface-dim": "#d4dcd8",
+              "on-error-container": "#742410",
+              "error": "#9e422c",
+              "secondary-container": "#e4e2de",
+              "primary-dim": "#53524f",
+              "surface-container": "#ecefec",
+              "outline": "#767c79",
+              "tertiary": "#615f58",
+              "on-primary-fixed": "#403f3c",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#5c5b58",
+              "secondary-dim": "#535350",
+              "surface-container-highest": "#dee4e0",
+              "surface-tint": "#5f5e5b",
+              "background": "#f9f9f7",
+              "on-primary-container": "#52524e",
+              "tertiary-fixed-dim": "#e0dcd4",
+              "on-error": "#fff7f6",
+              "secondary-fixed-dim": "#d5d4d0"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl">
+<nav class="flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="font-serif text-2xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">MONOLITH</div>
+<div class="hidden md:flex items-center gap-12 font-serif tracking-tight text-lg uppercase">
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300" href="#">Home</a>
+<a class="text-zinc-900 dark:text-zinc-50 border-b border-zinc-900 dark:border-zinc-50 pb-1" href="#">Properties</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300" href="#">About</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-70 transition-opacity duration-500">
+<span class="material-symbols-outlined text-zinc-900 dark:text-zinc-50" data-icon="search">search</span>
+</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-zinc-900 dark:text-zinc-50" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<div class="bg-zinc-100 dark:bg-zinc-800 h-[1px] w-full"></div>
+</header>
+<main class="pt-32 pb-24">
+<!-- Filter Section: The Architectural Ledger -->
+<section class="px-8 mb-20 max-w-screen-2xl mx-auto">
+<div class="mb-12">
+<h1 class="font-headline text-5xl md:text-6xl tracking-tighter text-on-surface leading-none mb-4">Curated Estates</h1>
+<p class="font-label text-sm uppercase tracking-[0.2em] text-on-surface-variant">Defining the Art of Living</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+<div class="lg:col-span-4 group">
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Search Location</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:ring-0 focus:border-primary px-0 py-3 font-body text-lg placeholder:text-outline-variant/60 transition-colors" placeholder="City, Region or Address" type="text"/>
+</div>
+<div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Operation</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:ring-0 focus:border-primary px-0 py-3 font-body text-sm appearance-none cursor-pointer">
+<option>For Sale</option>
+<option>For Rent</option>
+</select>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Property Type</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:ring-0 focus:border-primary px-0 py-3 font-body text-sm appearance-none cursor-pointer">
+<option>All Types</option>
+<option>Villa</option>
+<option>Penthouse</option>
+<option>Apartment</option>
+</select>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Price Range</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:ring-0 focus:border-primary px-0 py-3 font-body text-sm appearance-none cursor-pointer">
+<option>Any Price</option>
+<option>$1M - $5M</option>
+<option>$5M - $15M</option>
+<option>$15M+</option>
+</select>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 block">Bedrooms</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant/40 focus:ring-0 focus:border-primary px-0 py-3 font-body text-sm appearance-none cursor-pointer">
+<option>All</option>
+<option>2+ Beds</option>
+<option>4+ Beds</option>
+<option>6+ Beds</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Property Grid: Asymmetric Editorial Layout -->
+<section class="px-8 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12">
+<!-- Property Card 01 -->
+<article class="flex flex-col gap-6 group">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low">
+<img alt="Luxury Villa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern white villa with glass walls and pool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZSCgOw6-G7odZxHBMSkF4ti39mxBXNx7kl6wALUgv1jF_O17CBPIR3MISIidqL1zXmkcRlK-tmn1q-wZLZKIsiuSkqSyog5OuvvX2GAnNWVSOFedWZhUFAfLZCKtmgx1wQIovHL3enYZlXFbZQDkwe4tl_wtglcSHgCPRFh1VXBOKcxE2w08_qhwjKEZ5vuCIIC8ng3lPFnXEYA1dReD5o7wtk1CjgQfgiZALkV2DaPytXFUwFith7onmPUauiDBjr_zFWS2_B6w"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2">
+<span class="font-label text-[10px] uppercase tracking-widest">{{property.status}}</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h2 class="font-headline text-2xl tracking-tight leading-tight">The Obsidian Pavilion</h2>
+<span class="font-label text-sm font-medium tracking-wide text-primary">{{property.price}}</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant line-clamp-1">Malibu, California • 6,400 sq ft</p>
+<div class="flex gap-6 mt-2">
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="bed">bed</span>
+<span class="text-xs uppercase tracking-tighter">4 Beds</span>
+</div>
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="bathtub">bathtub</span>
+<span class="text-xs uppercase tracking-tighter">5 Baths</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Property Card 02 (Perspective Peek Shift) -->
+<article class="flex flex-col gap-6 group lg:mt-16">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low">
+<img alt="Penthouse Interior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High ceiling luxury apartment with marble floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDQZoC4Bu3SqgmwccfXUGiu-b11PvtTsTVXOrs6wuYCU8DlIAUlW2OoGwXxIU1Ka73gslXe7Y0dn5tsXiu-oud-jA3FasehE8pz4HkoNTjGEKiFoUknz8fWQgm7e8jkrpQRsdKc4MiOp2sITMwSiLhusz9Dy6CSdmCZl3CIrc02a_IR8amgkjbOXZjWZaYOda-4Xhqf8z-JE3L1FgutRaLEiI4ORXFilcD824oI61CR-NGOIf813kASb7LosB8uTRr4otnN1Zb_dE"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2">
+<span class="font-label text-[10px] uppercase tracking-widest">{{property.status}}</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h2 class="font-headline text-2xl tracking-tight leading-tight">Aether Penthouse</h2>
+<span class="font-label text-sm font-medium tracking-wide text-primary">{{property.price}}</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant line-clamp-1">Tribeca, New York • 3,200 sq ft</p>
+<div class="flex gap-6 mt-2">
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="bed">bed</span>
+<span class="text-xs uppercase tracking-tighter">3 Beds</span>
+</div>
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="bathtub">bathtub</span>
+<span class="text-xs uppercase tracking-tighter">3 Baths</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Property Card 03 -->
+<article class="flex flex-col gap-6 group">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low">
+<img alt="Brutalist Concrete House" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist concrete architecture surrounded by pine trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVS08ywILnu8g-JnH1TWx5Em7HdlfPs9wM0Qxpy4NjJRExbTN5urQejmVPWcTqC45MQXUc_1uaOykBW5X78Sxl5Gu71osGqJ02Nrex78R6KVZE5xep9ze3pvOlgyy19Gg7phUj5poEBB94m_z2LCPHcp_9NjZqhke65zI25VzDre3DwhASYDqPmdtTdz-1ZEbf3HHLzJDsNes4GkSHivaLc8Hj6tfhPbuGptveajIG--q5zwhhmf3WyM-4VtppecuihaDyzwRd2ZM"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2">
+<span class="font-label text-[10px] uppercase tracking-widest">{{property.status}}</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h2 class="font-headline text-2xl tracking-tight leading-tight">Monolith Echo</h2>
+<span class="font-label text-sm font-medium tracking-wide text-primary">{{property.price}}</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant line-clamp-1">Aspen, Colorado • 8,100 sq ft</p>
+<div class="flex gap-6 mt-2">
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="bed">bed</span>
+<span class="text-xs uppercase tracking-tighter">6 Beds</span>
+</div>
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="bathtub">bathtub</span>
+<span class="text-xs uppercase tracking-tighter">7 Baths</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Property Card 04 -->
+<article class="flex flex-col gap-6 group">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low">
+<img alt="Lakeside retreat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern wood and glass cabin over a lake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBM081uncDvLqiZl7mts_3O2-7Ej10owkyArLvpylrJc97mYXUA8d9IYvCXIyzX_g-xCm2eqbjnes4MQCBelu4fsQb-KY5kl7RsUHf4Gm8n1BmKmVTZyGSHv9n_SfMCx9cUGYPa5g3mFqXUYyj50PnXATlasvrh0InjhQqnuZi3A1XNB82_BEcoujKB2QRyywzrFKT8QMrqnQIX_weKKEI0ULt5PYx0rGkTKK_06VldPL4uCKd1IzcOgbiXwR5DKR5-Nn8JM-79bQ"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2">
+<span class="font-label text-[10px] uppercase tracking-widest">{{property.status}}</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h2 class="font-headline text-2xl tracking-tight leading-tight">The Glass Sanctuary</h2>
+<span class="font-label text-sm font-medium tracking-wide text-primary">{{property.price}}</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant line-clamp-1">Lake Tahoe, Nevada • 4,500 sq ft</p>
+<div class="flex gap-6 mt-2">
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="bed">bed</span>
+<span class="text-xs uppercase tracking-tighter">4 Beds</span>
+</div>
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="bathtub">bathtub</span>
+<span class="text-xs uppercase tracking-tighter">4 Baths</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Property Card 05 (Offset Layout) -->
+<article class="flex flex-col gap-6 group lg:-mt-16">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low">
+<img alt="Spanish Revival" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Classic white mediterranean villa with terracotta tiles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuk1ifpa4P-6F3ITIZCHIZcT0eSOo4p2O25OEoFSwpuwZH12A_uAAT5km7H0hGpA7Bm4jgexTdDcCogox9yo9DilRBg0cOMBWKh4XRLlW7hQob64_fxrSXfsoU7jGNC5Iiq7wIl_v-UV_4EHF2CUWUqlp6VTuEqN08F6u7ece95_7lPVYfoEs5mnENOpUbXgfM6VwaTeawyd6Ob0Pytq9k8gmfZSknF4W6I0B5BBysu9wh4XCJvxbheG8pLeTG2I6k1TwEsSiWJ5U"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2">
+<span class="font-label text-[10px] uppercase tracking-widest">{{property.status}}</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h2 class="font-headline text-2xl tracking-tight leading-tight">Villa Marisol</h2>
+<span class="font-label text-sm font-medium tracking-wide text-primary">{{property.price}}</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant line-clamp-1">Santa Barbara, California • 5,800 sq ft</p>
+<div class="flex gap-6 mt-2">
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="bed">bed</span>
+<span class="text-xs uppercase tracking-tighter">5 Beds</span>
+</div>
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="bathtub">bathtub</span>
+<span class="text-xs uppercase tracking-tighter">6 Baths</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Property Card 06 -->
+<article class="flex flex-col gap-6 group">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low">
+<img alt="Luxury Mansion" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Vast contemporary mansion with multiple levels and lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBynoXHn58C-QSfrnJtklp_IPWG0pjrdOWhDIDDmMyTjHSisvSoQiLn3tdCFEonrVBBV4fkNmPxrAzs1UtveEukxc69i4wWkvgo6qUDywSmGElVx4z93HkrsQsnQt4WZpTaR2ehjvW3o3gU0FJMZqyH0AxmySYCWzV3h2nTOucLIvEC1KxzTHk-udWEGaTUAxmVgJttv_tyaHDvvvzlA3I0guBohAlgMJQZLQeYpcqHCuu8o4ScNALgqPdch-M_gMNZkf75oZMBalQ"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2">
+<span class="font-label text-[10px] uppercase tracking-widest">{{property.status}}</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h2 class="font-headline text-2xl tracking-tight leading-tight">Solstice Manor</h2>
+<span class="font-label text-sm font-medium tracking-wide text-primary">{{property.price}}</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant line-clamp-1">Austin, Texas • 7,200 sq ft</p>
+<div class="flex gap-6 mt-2">
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="bed">bed</span>
+<span class="text-xs uppercase tracking-tighter">5 Beds</span>
+</div>
+<div class="flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="bathtub">bathtub</span>
+<span class="text-xs uppercase tracking-tighter">5 Baths</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-32 flex flex-col items-center gap-8">
+<p class="font-label text-[10px] uppercase tracking-[0.3em] text-on-surface-variant">Showing 6 of 128 Properties</p>
+<button class="bg-surface-tint text-on-primary px-12 py-5 font-label text-xs uppercase tracking-[0.2em] hover:opacity-90 transition-opacity">
+                    Load More Explorations
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<span class="font-serif text-xl tracking-tighter text-zinc-900 dark:text-zinc-50">MONOLITH</span>
+<p class="text-zinc-500 dark:text-zinc-400 font-body text-sm max-w-xs leading-relaxed">Providing architectural excellence and unparalleled luxury real estate since 1994.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<h4 class="font-sans text-xs tracking-widest uppercase text-zinc-900 dark:text-zinc-100 font-bold">Company</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300 font-sans text-xs tracking-widest uppercase" href="#">About</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300 font-sans text-xs tracking-widest uppercase" href="#">Properties</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300 font-sans text-xs tracking-widest uppercase" href="#">Journal</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-sans text-xs tracking-widest uppercase text-zinc-900 dark:text-zinc-100 font-bold">Connect</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300 font-sans text-xs tracking-widest uppercase" href="#">Instagram</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300 font-sans text-xs tracking-widest uppercase" href="#">LinkedIn</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300 font-sans text-xs tracking-widest uppercase" href="#">Newsletter</a>
+</nav>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-sans text-xs tracking-widest uppercase text-zinc-900 dark:text-zinc-100 font-bold">Legal</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300 font-sans text-xs tracking-widest uppercase" href="#">Privacy Policy</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300 font-sans text-xs tracking-widest uppercase" href="#">Terms of Service</a>
+</nav>
+<p class="text-zinc-400 dark:text-zinc-600 font-sans text-[10px] tracking-widest uppercase mt-4">© 2024 Architectural Monolith. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

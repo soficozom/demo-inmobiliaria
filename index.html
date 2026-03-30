@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#e5e2dd",
+              "on-background": "#2d3432",
+              "on-secondary-container": "#51524f",
+              "on-secondary-fixed-variant": "#5b5c58",
+              "tertiary-dim": "#55534c",
+              "on-secondary-fixed": "#3f403c",
+              "outline-variant": "#adb3b0",
+              "on-surface": "#2d3432",
+              "surface-container-low": "#f2f4f2",
+              "secondary-fixed": "#e4e2de",
+              "on-primary": "#faf7f2",
+              "on-tertiary-fixed-variant": "#63615a",
+              "on-secondary": "#faf9f4",
+              "primary": "#5f5e5b",
+              "on-tertiary-fixed": "#46453e",
+              "error-container": "#fe8b70",
+              "surface-container-high": "#e5e9e6",
+              "primary-fixed-dim": "#d6d4cf",
+              "surface": "#f9f9f7",
+              "surface-variant": "#dee4e0",
+              "on-surface-variant": "#5a605e",
+              "on-tertiary": "#fdf8ef",
+              "inverse-surface": "#0c0f0e",
+              "on-tertiary-container": "#585750",
+              "secondary": "#5f5f5c",
+              "surface-bright": "#f9f9f7",
+              "tertiary-container": "#efebe1",
+              "primary-fixed": "#e5e2dd",
+              "tertiary-fixed": "#efebe1",
+              "inverse-on-surface": "#9c9d9b",
+              "error-dim": "#5c1202",
+              "inverse-primary": "#ffffff",
+              "surface-dim": "#d4dcd8",
+              "on-error-container": "#742410",
+              "error": "#9e422c",
+              "secondary-container": "#e4e2de",
+              "primary-dim": "#53524f",
+              "surface-container": "#ecefec",
+              "outline": "#767c79",
+              "tertiary": "#615f58",
+              "on-primary-fixed": "#403f3c",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#5c5b58",
+              "secondary-dim": "#535350",
+              "surface-container-highest": "#dee4e0",
+              "surface-tint": "#5f5e5b",
+              "background": "#f9f9f7",
+              "on-primary-container": "#52524e",
+              "tertiary-fixed-dim": "#e0dcd4",
+              "on-error": "#fff7f6",
+              "secondary-fixed-dim": "#d5d4d0"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f7;
+            color: #2d3432;
+            font-family: 'Inter', sans-serif;
+        }
+        .perspective-peek {
+            clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="font-serif text-2xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">MONOLITH</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300" href="#">Home</a>
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300" href="#">Properties</a>
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-900 dark:text-zinc-50 border-b border-zinc-900 dark:border-zinc-50 pb-1" href="#">About</a>
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-zinc-900 dark:text-zinc-50 cursor-pointer hover:opacity-70 transition-opacity duration-500">search</span>
+</div>
+</div>
+<div class="bg-zinc-100 dark:bg-zinc-800 h-[1px] w-full"></div>
+</nav>
+<main class="pt-32">
+<!-- Editorial Header & Brand Story -->
+<section class="px-8 mb-32 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-7">
+<span class="font-label text-xs tracking-[0.3em] uppercase text-outline mb-6 block">Our Genesis</span>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tighter mb-12">Architecture as a <span class="italic">Legacy</span>.</h1>
+<div class="max-w-xl space-y-8 font-body text-lg leading-relaxed text-on-surface-variant">
+<p>Founded in 1994, MONOLITH was born from a singular vision: that real estate is not merely a transaction of space, but a curated preservation of architectural intent. We do not sell houses; we steward monuments of modern living.</p>
+<p>For three decades, our firm has operated at the intersection of high-art and functional luxury, bridging the gap between visionary designers and those who seek to inhabit their work.</p>
+</div>
+</div>
+<div class="md:col-span-5 relative mt-12 md:mt-24">
+<div class="aspect-[3/4] bg-surface-container-low overflow-hidden">
+<img alt="Brutalist concrete architecture detail" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Minimalist brutalist concrete architectural staircase detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD01hYc-0ZdbyTRmPzschfNV2FXqvrAxZL7Et7tfA25qWLg5Ifc0a8Kw2MmXtrn_Fa62aYZOmRWaqZiB3dwtZoiL_VjycuVM4uHaGyVeY5YXvyf6v2F09WQUvo2Ii0-N3aHwXrYl0y2t7ioab7iQeCb5kP-vW_xlbGYTwBQZhQAr2-JHsd9EXGiJhwmTeNRmiFLJGVGPU--8ztZ5Rz6TV1jZpXrJo4odopBEzub44fZbCj_pB80KScod6LRuJzKrMqQAmZMKkvjnwU"/>
+</div>
+<div class="absolute -bottom-8 -left-8 p-10 bg-surface-container-lowest hidden lg:block border-l-4 border-surface-tint">
+<p class="font-headline text-2xl italic tracking-tight">"Space is the breath of art."</p>
+<p class="font-label text-[10px] uppercase tracking-widest mt-2 text-outline">Frank Lloyd Wright</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section (Color Shift Background) -->
+<section class="bg-surface-container-low py-32">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row gap-20">
+<div class="md:w-1/3">
+<h2 class="font-headline text-4xl tracking-tight sticky top-40">The Monolith <br/>Philosophy</h2>
+</div>
+<div class="md:w-2/3 space-y-24">
+<div class="border-l border-outline-variant pl-12">
+<h3 class="font-label text-sm uppercase tracking-widest mb-4">I. Intentionality</h3>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed">Every property in our portfolio is selected based on a rigorous set of architectural criteria. We prioritize light, material integrity, and spatial rhythm over square footage and market trends.</p>
+</div>
+<div class="border-l border-outline-variant pl-12">
+<h3 class="font-label text-sm uppercase tracking-widest mb-4">II. Discretion</h3>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed">Our clients value silence. We operate a bespoke service model that prioritizes privacy, ensuring that the world's most significant estates transition hands with quiet dignity.</p>
+</div>
+<div class="border-l border-outline-variant pl-12">
+<h3 class="font-label text-sm uppercase tracking-widest mb-4">III. Legacy</h3>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed">We believe a home should last a century. We represent properties that are built to endure, utilizing timeless materials like stone, glass, and steel.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Team Section -->
+<section class="py-32 max-w-7xl mx-auto px-8">
+<div class="mb-20 text-center">
+<span class="font-label text-xs tracking-[0.3em] uppercase text-outline mb-4 block">The Stewards</span>
+<h2 class="font-headline text-5xl tracking-tight">Expertise in Form</h2>
+</div>
+<!-- Agent Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<!-- Agent 1 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container-high overflow-hidden mb-8">
+<img alt="Portrait of Julian Voss" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="Black and white editorial male portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXQIJsMd8t3DD2fikduJhQ_SlWM6Hk8OvdCA7TvceQ8naxAHO07e1WQok1pCWM-YJAaD9dXbRzjuwYAAoPXRtl9fs1kl4omRaJ0F_dVeeogsSf1ZZwpeuKx1s-Yej8FT_Ug7wxdSWLR8kXduHflb4xSnKV7R_OJVsDh4rix2Kbao5ZSZpnkkTk9n5PpTigp0BcCyN8pZvzveEZjQt1AOZmAPzvjE5X48vChUufdAtyYMVNgHlzYfbiR6IG8o6vumMNrR5IzIeIQSM"/>
+</div>
+<h3 class="font-headline text-2xl mb-1">Julian Voss</h3>
+<p class="font-label text-xs uppercase tracking-widest text-outline mb-6">Founding Partner</p>
+<p class="font-body text-sm leading-relaxed text-on-surface-variant">With a background in architectural history, Julian oversees the curation of our primary estate portfolio across Europe and North America.</p>
+</div>
+<!-- Agent 2 -->
+<div class="group mt-12 md:mt-24">
+<div class="aspect-[4/5] bg-surface-container-high overflow-hidden mb-8">
+<img alt="Portrait of Elena Rossi" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="High-end professional female portrait photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo3iSavRRXmNiX6cTYhRo45g-u-oEmPQrsiWIYiCb_by_QitYT6YOnR7S-qhkzXX7rrtjSHZyP4awyO3vadbl5a5NCwPpnv14yx4PIIQ-WAxtsXjnlXwQHpshh-anwwl5dyeXb-MTHcm1-uzU6ewhXoQ8V2QAvNKpRt_QP7MdPKh6rHb44mSM0vaFJIrmA3RZCYj0rrwHXNkG6dJROkth5jsBQuI-yAfEva0-bBKMMqiJ6G0-OCIFG0KwZHFplGToo2gFMqxz8rFY"/>
+</div>
+<h3 class="font-headline text-2xl mb-1">Elena Rossi</h3>
+<p class="font-label text-xs uppercase tracking-widest text-outline mb-6">Director of Acquisitions</p>
+<p class="font-body text-sm leading-relaxed text-on-surface-variant">Elena specializes in mid-century modern preservation, having successfully placed over fifty Neutra and Lautner homes into permanent stewardship.</p>
+</div>
+<!-- Agent 3 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container-high overflow-hidden mb-8">
+<img alt="Portrait of Marcus Thorne" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="Editorial close up male portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM6XoTUwbWSutX4Suj_SrvOFujG79XsgqlgCW5cEUPbd7z-yGCTN6QXutOffkP-01-WMlfmFsTy4C2oWvAHua3AfZXn5pcq4b7tEKgAsBHVPvghk0mvrLPc_rqNUZFl5bPH9WneCOmZIINDp1Tz0cZuiQbB9mpSUHvhlCkTBjVW73c6cik1VLi_RW7_QJ8G9MKFLlHf-axfBIpiBVufxNaSL9Gmc2t46jK9w0suPJvpEsW1X16PNLpQyL2Zt3zCF6S1HRIRnDvZHs"/>
+</div>
+<h3 class="font-headline text-2xl mb-1">Marcus Thorne</h3>
+<p class="font-label text-xs uppercase tracking-widest text-outline mb-6">Lead Curator</p>
+<p class="font-body text-sm leading-relaxed text-on-surface-variant">Marcus translates spatial data into lifestyle narratives, ensuring that every buyer understands the structural soul of their potential home.</p>
+</div>
+</div>
+</section>
+<!-- Perspective Peek Component (Asymmetric Image Section) -->
+<section class="mb-32 pl-8 overflow-hidden">
+<div class="flex items-center gap-12">
+<div class="w-full md:w-3/4 aspect-[21/9] overflow-hidden">
+<img alt="Luxury Modernist Villa" class="w-full h-full object-cover" data-alt="Panoramic view of modern concrete villa pool at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOoS4Y3jruRQUmOYA1Jzx2323DKJIABkTsFtTOnfyebssaLmEgJdMAIkKdthtdjx2EBqZCqJ54WPTRWRjFZDK44kzTYVF04JxY9F5t6q8v2ZHHnZnL6BkI94SnIwKLBmbX2jh8ur9luF72M6Y6lPl0OzleZGMhWEK_2oUF6n3Bh7626xXLBwhiY9ZYKFfy29Tb76zbWr9hJsl3mj_SXK1GsJ_izs2jyYS6ZA1G5_Z0jFdTBElX99eKZtfLl3egR_E6MOs8HSeoL9s"/>
+</div>
+<div class="hidden md:block w-1/4 aspect-[4/5] bg-surface-container-high opacity-50 perspective-peek">
+<img alt="Interior Detail" class="w-full h-full object-cover grayscale" data-alt="Blurred detail of minimalist interior hallway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXciFMerGatyo_CqygTLGDXhyveNOb0F24hQsYit7jQ9rp46Zb8ZatCWmgE4Ou1WqT8a2qvXAQAot3R7XIPWJD6qlcyrVmOO4YrTnexacVmgyCrvAzBpgRkec3DJ4yo4qHb5Wblw4Dvm6GmTGkFUZG2f_bkyjeA4q674igeKI6B37BlwIrCPk-4eDWiT9W06Cpq6InFf7M2rG0T6wDIr5_-D4KpdovLAKZyP0WWXuNzRI-INoOmV_0n-4soZH5oZxrCsVCeGDzAtw"/>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 -mt-12 relative z-10">
+<div class="bg-surface-container-lowest p-12 inline-block shadow-sm">
+<h4 class="font-headline text-3xl mb-4">Curating the Future</h4>
+<p class="font-body text-on-surface-variant max-w-md">Our archives hold the keys to tomorrow's landmarks. Experience the Monolith standard in private viewing.</p>
+<button class="mt-8 bg-surface-tint text-on-primary px-8 py-4 font-label text-sm uppercase tracking-widest hover:opacity-90 transition-opacity">Request Consultation</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-50 dark:bg-zinc-950 w-full border-t border-zinc-200 dark:border-zinc-800">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-serif text-xl tracking-tighter text-zinc-900 dark:text-zinc-50">MONOLITH</div>
+<p class="text-xs font-sans tracking-widest uppercase text-zinc-500 dark:text-zinc-400 max-w-xs leading-relaxed">
+                    Elevating real estate to the status of architectural fine art. Bespoke curation for the discerning inhabitant.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<span class="text-xs font-sans tracking-widest uppercase font-bold text-zinc-900 dark:text-zinc-100">Company</span>
+<a class="text-xs font-sans tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">About</a>
+<a class="text-xs font-sans tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Newsletter</a>
+<a class="text-xs font-sans tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-xs font-sans tracking-widest uppercase font-bold text-zinc-900 dark:text-zinc-100">Legal</span>
+<a class="text-xs font-sans tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="text-xs font-sans tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<span class="text-xs font-sans tracking-widest uppercase font-bold text-zinc-900 dark:text-zinc-100">Social</span>
+<div class="flex gap-6">
+<a class="text-xs font-sans tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Instagram</a>
+<a class="text-xs font-sans tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">LinkedIn</a>
+</div>
+<p class="text-[10px] text-zinc-400 mt-12">© 2024 Architectural Monolith. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

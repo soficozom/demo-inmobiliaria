@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#e5e2dd",
+              "on-background": "#2d3432",
+              "on-secondary-container": "#51524f",
+              "on-secondary-fixed-variant": "#5b5c58",
+              "tertiary-dim": "#55534c",
+              "on-secondary-fixed": "#3f403c",
+              "outline-variant": "#adb3b0",
+              "on-surface": "#2d3432",
+              "surface-container-low": "#f2f4f2",
+              "secondary-fixed": "#e4e2de",
+              "on-primary": "#faf7f2",
+              "on-tertiary-fixed-variant": "#63615a",
+              "on-secondary": "#faf9f4",
+              "primary": "#5f5e5b",
+              "on-tertiary-fixed": "#46453e",
+              "error-container": "#fe8b70",
+              "surface-container-high": "#e5e9e6",
+              "primary-fixed-dim": "#d6d4cf",
+              "surface": "#f9f9f7",
+              "surface-variant": "#dee4e0",
+              "on-surface-variant": "#5a605e",
+              "on-tertiary": "#fdf8ef",
+              "inverse-surface": "#0c0f0e",
+              "on-tertiary-container": "#585750",
+              "secondary": "#5f5f5c",
+              "surface-bright": "#f9f9f7",
+              "tertiary-container": "#efebe1",
+              "primary-fixed": "#e5e2dd",
+              "tertiary-fixed": "#efebe1",
+              "inverse-on-surface": "#9c9d9b",
+              "error-dim": "#5c1202",
+              "inverse-primary": "#ffffff",
+              "surface-dim": "#d4dcd8",
+              "on-error-container": "#742410",
+              "error": "#9e422c",
+              "secondary-container": "#e4e2de",
+              "primary-dim": "#53524f",
+              "surface-container": "#ecefec",
+              "outline": "#767c79",
+              "tertiary": "#615f58",
+              "on-primary-fixed": "#403f3c",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#5c5b58",
+              "secondary-dim": "#535350",
+              "surface-container-highest": "#dee4e0",
+              "surface-tint": "#5f5e5b",
+              "background": "#f9f9f7",
+              "on-primary-container": "#52524e",
+              "tertiary-fixed-dim": "#e0dcd4",
+              "on-error": "#fff7f6",
+              "secondary-fixed-dim": "#d5d4d0"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl">
+<nav class="flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="font-serif text-2xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50">MONOLITH</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-900 dark:text-zinc-50 border-b border-zinc-900 dark:border-zinc-50 pb-1" href="#">Home</a>
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300" href="#">Properties</a>
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300" href="#">About</a>
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-zinc-900 dark:text-zinc-50 hover:opacity-70 transition-opacity duration-500">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="md:hidden text-zinc-900">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<div class="bg-zinc-100 dark:bg-zinc-800 h-[1px] w-full"></div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center overflow-hidden bg-surface">
+<div class="absolute inset-0 z-0">
+<img alt="Modern luxury villa with pool" class="w-full h-full object-cover grayscale-[0.2] brightness-90" data-alt="Modern architectural masterpiece luxury villa exterior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Hs-V89PNTJXrBNjMY9JzLiMAkud81iOOgyma6aNv9WMPHKv4xsr517lM5Z3hQzmo17uwTLTcd375hZU1j452EmFVCSHcLT2wB_xW1PaA8gcSR_8yzuuaDStNAw6v9lfaLC-kUMkTte6I_-sUT8i0oyUdzB0VywSZKcvsKeKWrJOfdhPCPR71iVJ0Clklo4gQk15heSXA-onSc8DGiuia-InHi3KQVauaUuBm13Xgcd5vh-YoW0JbN0ty6uIRA6vXx8FNDGI9Mmw"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background/40 to-transparent"></div>
+</div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="max-w-4xl">
+<span class="label-md uppercase tracking-[0.3em] text-on-surface-variant mb-6 block">Established 1994</span>
+<h1 class="font-headline text-6xl md:text-8xl lg:text-[7rem] leading-[0.9] tracking-tighter text-on-surface mb-12">
+                        Defining the <br/> <span class="italic">Modern</span> Estate.
+                    </h1>
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<button class="bg-surface-tint text-on-primary px-12 py-5 text-sm uppercase tracking-widest hover:bg-primary transition-all duration-500">
+                            Explore Collection
+                        </button>
+<p class="max-w-xs text-on-surface-variant text-sm leading-relaxed mt-2">
+                            A curated portfolio of architectural significance, where form meets the exceptional.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Intro -->
+<section class="py-32 md:py-48 bg-surface">
+<div class="container mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-end">
+<div class="md:col-span-7">
+<h2 class="font-headline text-4xl md:text-5xl leading-tight text-on-surface mb-8">
+                            We do not broker buildings; <br/> we curate environments for the <span class="text-outline">avant-garde</span>.
+                        </h2>
+</div>
+<div class="md:col-span-4 md:col-start-9">
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                            Monolith operates at the intersection of architecture, investment, and lifestyle. Our philosophy is rooted in the belief that space dictates experience.
+                        </p>
+<a class="inline-flex items-center gap-2 group" href="#">
+<span class="label-md uppercase tracking-widest text-primary">Our Philosophy</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Properties -->
+<section class="pb-48 bg-surface">
+<div class="container mx-auto px-8">
+<div class="flex justify-between items-end mb-20">
+<h3 class="font-headline text-3xl tracking-tight">The Portfolio</h3>
+<div class="h-[1px] flex-grow mx-12 bg-outline-variant/30 hidden md:block"></div>
+<button class="label-md uppercase tracking-widest text-on-surface hover:opacity-50 transition-opacity">View All</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-y-20 gap-x-12">
+<!-- Property Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden mb-6 bg-surface-container-low">
+<img alt="Property View" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" data-alt="Ultra modern white concrete villa facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzijuSh8MrXRBsgLGGCNcVH0kDrd_G-7IE0bDCfNGPOz5MV9mlH1S68h3HH1HWOG7eVR6viglFgsX9XREmtIyfw7uZe-6Vj0NgFiPxr-S4nU0vKQ-P4BsE14Hsidy7tYqQDYyhwqAgFHi3WfVWWpXXYD1DaQCXB-d1vstBMRFlpiE2etOa6EUpjhSd6dbkFSXb6mvg9LDTVprb_8nUOE_vjkyTGMzhAmjyQfoj-Tq-iZSiz87qo48yvW7J6O0YVhArhFiJX0SEYzY"/>
+<div class="absolute top-6 left-6 bg-surface/90 backdrop-blur px-4 py-1 text-[10px] uppercase tracking-widest">Available</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-xl mb-1">{{property.title_1}}</h4>
+<p class="text-on-surface-variant text-xs uppercase tracking-widest">{{property.location_1}}</p>
+</div>
+<p class="font-medium text-lg">{{property.price_1}}</p>
+</div>
+</div>
+<!-- Property Card 2 -->
+<div class="group cursor-pointer md:mt-24">
+<div class="relative aspect-[3/4] overflow-hidden mb-6 bg-surface-container-low">
+<img alt="Property View" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" data-alt="Minimalist interior with large glass windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvKzmfvh8UC0qbIiB85vHjh3Xgp-4b9I7B9IVij6BYVdUbVLI3fqmWy17mpzbwsI43m_GjK1KPFc8tvQRRtlGpS3vAV1Q7raVGzMS97j1_4RLqKlX-PLWo7KJKvWt9eqzybh3PI0z6BwgwqdpzxHPfRoSyuEqKEHWiljrtcJsJyrncK0PHdTlLbLljfW2VFLpqfoLlTdepsv2u8Mu0xxgOP83N8rlZd5OJnUhSj1DsvUQZN2GVbaHIhvsT8WKnhKt5rfcfXxFra2s"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-xl mb-1">{{property.title_2}}</h4>
+<p class="text-on-surface-variant text-xs uppercase tracking-widest">{{property.location_2}}</p>
+</div>
+<p class="font-medium text-lg">{{property.price_2}}</p>
+</div>
+</div>
+<!-- Property Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden mb-6 bg-surface-container-low">
+<img alt="Property View" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" data-alt="Contemporary hillside estate with infinity pool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2O3x91tNNXGx-NAnzeGqAhu6dXREO_lCN18RnkXez35_jAZMK7Wfsney9acQPYHqJNam1j6Rq8P_dai04rmzyj7i13j2NCjxbUUo7OANmeCMT8GErrovsY-voIZ9hUejhGx9tLRFyB8UGwoSMVN7b7qTZwkNB0_10B5_KboUt04GquWkguBbs9J0lBAL2Ksr-3zCF4HlWbJviwkJMTlTuzJAgnnoFwFXECgyMMtuUi2GDEy_DNFpCLwRAyyRYscBQ3G-MWL278mQ"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-xl mb-1">{{property.title_3}}</h4>
+<p class="text-on-surface-variant text-xs uppercase tracking-widest">{{property.location_3}}</p>
+</div>
+<p class="font-medium text-lg">{{property.price_3}}</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition (Bento Grid Style) -->
+<section class="py-32 bg-surface-container-low">
+<div class="container mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1px bg-outline-variant/20">
+<div class="bg-surface-container-low p-12 md:p-20">
+<span class="material-symbols-outlined text-4xl mb-8 text-primary" data-icon="lock">lock</span>
+<h4 class="font-headline text-2xl mb-4">Exclusive Listings</h4>
+<p class="text-on-surface-variant leading-relaxed">Access to off-market properties and quiet listings that never reach the public eye.</p>
+</div>
+<div class="bg-surface-container-low p-12 md:p-20">
+<span class="material-symbols-outlined text-4xl mb-8 text-primary" data-icon="architecture">architecture</span>
+<h4 class="font-headline text-2xl mb-4">Expert Guidance</h4>
+<p class="text-on-surface-variant leading-relaxed">Our consultants are trained in architectural history and market forensics.</p>
+</div>
+<div class="bg-surface-container-low p-12 md:p-20">
+<span class="material-symbols-outlined text-4xl mb-8 text-primary" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="font-headline text-2xl mb-4">Seamless Process</h4>
+<p class="text-on-surface-variant leading-relaxed">A white-glove transaction experience from discovery to final signature.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials (Editorial Layout) -->
+<section class="py-48 bg-surface">
+<div class="container mx-auto px-8">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-5xl text-primary-fixed-dim mb-12" data-icon="format_quote">format_quote</span>
+<p class="font-headline text-3xl md:text-4xl italic leading-relaxed text-on-surface mb-12">
+                        "The Monolith team understands that luxury is not about price—it's about the precision of the design and the purity of the space."
+                    </p>
+<div class="flex flex-col items-center">
+<div class="w-16 h-[1px] bg-primary mb-6"></div>
+<p class="label-md uppercase tracking-widest text-on-surface">Julianne Vance</p>
+<p class="text-xs text-on-surface-variant tracking-tighter mt-1">Founding Partner, Vance &amp; Co.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="relative py-48 overflow-hidden bg-on-background">
+<div class="absolute inset-0 opacity-20">
+<img alt="Skyscraper detail" class="w-full h-full object-cover" data-alt="Abstract architectural lines of a skyscraper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe-gP-tkvt22wLZhsJ7xqQk88FJjc_4FXf6BigpGVQ16YJGb0NLeCQasZX4otyjF6MtKxim02dP1sfB_a2-ZQhC6D5cPHIQ-SXqrYG2xlexY6OWtFjSWEj4fiGqo09_Mfiinbr_okJ_24Oomb57yjNGEam3Hy6pkQppGYn7D53HVfTzdKMAmyrHYtFtJDrDRH__tAkhGOrQrHBOCG-D-P9ZZIAMFYBUVFhpsdEh8Ge-bjTCHEqeDi0u4Al9PPQIeB2QHgdsw4wx1Y"/>
+</div>
+<div class="container mx-auto px-8 relative z-10 text-center">
+<h2 class="font-headline text-5xl md:text-7xl text-surface mb-16 max-w-4xl mx-auto">Begin your <br/> <span class="italic text-primary-fixed-dim">acquisition</span>.</h2>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="bg-surface text-on-background px-16 py-6 text-sm uppercase tracking-widest hover:bg-surface-container-highest transition-colors">
+                        Request Portfolio
+                    </button>
+<button class="border border-surface/30 text-surface px-16 py-6 text-sm uppercase tracking-widest hover:bg-surface/10 transition-colors">
+                        Contact Office
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-50 dark:bg-zinc-950 w-full border-t border-zinc-200 dark:border-zinc-800">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div>
+<div class="font-serif text-xl tracking-tighter text-zinc-900 dark:text-zinc-50 mb-8">MONOLITH</div>
+<p class="text-zinc-500 text-xs leading-loose max-w-xs">
+                    Curating architectural experiences globally. Our offices are located in London, Tokyo, and New York.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<span class="font-sans text-xs tracking-widest uppercase font-bold text-zinc-900 dark:text-zinc-100">Navigation</span>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Properties</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">About</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Newsletter</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-sans text-xs tracking-widest uppercase font-bold text-zinc-900 dark:text-zinc-100">Social</span>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">Instagram</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300" href="#">LinkedIn</a>
+</div>
+</div>
+<div class="flex flex-col justify-between">
+<div class="flex flex-col gap-4">
+<span class="font-sans text-xs tracking-widest uppercase font-bold text-zinc-900 dark:text-zinc-100">Inquiries</span>
+<p class="font-sans text-xs tracking-widest uppercase text-zinc-500">concierge@monolith.com</p>
+</div>
+<p class="font-sans text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400 mt-12 md:mt-0">
+                    © 2024 Architectural Monolith. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

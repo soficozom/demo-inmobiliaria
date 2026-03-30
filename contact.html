@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#e5e2dd",
+              "on-background": "#2d3432",
+              "on-secondary-container": "#51524f",
+              "on-secondary-fixed-variant": "#5b5c58",
+              "tertiary-dim": "#55534c",
+              "on-secondary-fixed": "#3f403c",
+              "outline-variant": "#adb3b0",
+              "on-surface": "#2d3432",
+              "surface-container-low": "#f2f4f2",
+              "secondary-fixed": "#e4e2de",
+              "on-primary": "#faf7f2",
+              "on-tertiary-fixed-variant": "#63615a",
+              "on-secondary": "#faf9f4",
+              "primary": "#5f5e5b",
+              "on-tertiary-fixed": "#46453e",
+              "error-container": "#fe8b70",
+              "surface-container-high": "#e5e9e6",
+              "primary-fixed-dim": "#d6d4cf",
+              "surface": "#f9f9f7",
+              "surface-variant": "#dee4e0",
+              "on-surface-variant": "#5a605e",
+              "on-tertiary": "#fdf8ef",
+              "inverse-surface": "#0c0f0e",
+              "on-tertiary-container": "#585750",
+              "secondary": "#5f5f5c",
+              "surface-bright": "#f9f9f7",
+              "tertiary-container": "#efebe1",
+              "primary-fixed": "#e5e2dd",
+              "tertiary-fixed": "#efebe1",
+              "inverse-on-surface": "#9c9d9b",
+              "error-dim": "#5c1202",
+              "inverse-primary": "#ffffff",
+              "surface-dim": "#d4dcd8",
+              "on-error-container": "#742410",
+              "error": "#9e422c",
+              "secondary-container": "#e4e2de",
+              "primary-dim": "#53524f",
+              "surface-container": "#ecefec",
+              "outline": "#767c79",
+              "tertiary": "#615f58",
+              "on-primary-fixed": "#403f3c",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#5c5b58",
+              "secondary-dim": "#535350",
+              "surface-container-highest": "#dee4e0",
+              "surface-tint": "#5f5e5b",
+              "background": "#f9f9f7",
+              "on-primary-container": "#52524e",
+              "tertiary-fixed-dim": "#e0dcd4",
+              "on-error": "#fff7f6",
+              "secondary-fixed-dim": "#d5d4d0"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .ghost-border {
+            border-bottom: 1px solid rgba(173, 179, 176, 0.4);
+        }
+        .ghost-border:focus-within {
+            border-bottom: 1px solid #2d3432;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="font-serif text-2xl font-bold tracking-tighter text-zinc-900">MONOLITH</div>
+<nav class="hidden md:flex space-x-12 items-center">
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-500 hover:text-zinc-900 transition-colors duration-300" href="#">Home</a>
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-500 hover:text-zinc-900 transition-colors duration-300" href="#">Properties</a>
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-500 hover:text-zinc-900 transition-colors duration-300" href="#">About</a>
+<a class="font-serif tracking-tight text-lg uppercase text-zinc-900 border-b border-zinc-900 pb-1" href="#">Contact</a>
+</nav>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-zinc-900 text-2xl cursor-pointer hover:opacity-70 transition-opacity duration-500">search</span>
+</div>
+</div>
+<div class="bg-zinc-100 h-[1px] w-full"></div>
+</header>
+<main class="pt-32">
+<!-- Hero Section: Editorial Header -->
+<section class="px-8 md:px-20 py-16">
+<div class="max-w-7xl mx-auto">
+<span class="font-label text-xs tracking-widest uppercase text-outline mb-4 block">Connect with our studio</span>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter leading-none mb-12">Inquire About <br/>The Monolith.</h1>
+</div>
+</section>
+<!-- Main Content: Form & Business Info -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-0 border-t border-outline-variant/20">
+<!-- Left: Contact Form -->
+<div class="p-8 md:p-20 bg-surface-container-lowest">
+<form class="max-w-xl space-y-12">
+<div class="space-y-2">
+<label class="font-label text-xs tracking-widest uppercase text-outline">Full Name</label>
+<div class="ghost-border">
+<input class="w-full bg-transparent border-none p-0 py-3 focus:ring-0 placeholder:text-outline-variant/50 text-on-surface font-serif text-xl" placeholder="Your name" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs tracking-widest uppercase text-outline">Email Address</label>
+<div class="ghost-border">
+<input class="w-full bg-transparent border-none p-0 py-3 focus:ring-0 placeholder:text-outline-variant/50 text-on-surface font-serif text-xl" placeholder="example@studio.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs tracking-widest uppercase text-outline">Inquiry Type</label>
+<div class="ghost-border">
+<select class="w-full bg-transparent border-none p-0 py-3 focus:ring-0 text-on-surface font-serif text-xl appearance-none cursor-pointer">
+<option>Private Viewing</option>
+<option>Asset Management</option>
+<option>Portfolio Consultation</option>
+<option>Media Inquiry</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs tracking-widest uppercase text-outline">Message</label>
+<div class="ghost-border">
+<textarea class="w-full bg-transparent border-none p-0 py-3 focus:ring-0 placeholder:text-outline-variant/50 text-on-surface font-serif text-xl resize-none" placeholder="How can we assist your vision?" rows="4"></textarea>
+</div>
+</div>
+<button class="w-full md:w-auto bg-surface-tint text-on-primary px-12 py-5 font-label text-xs tracking-widest uppercase transition-all duration-300 hover:opacity-90 active:scale-[0.98]" type="submit">
+                        Send Inquiry
+                    </button>
+</form>
+</div>
+<!-- Right: Business Information & Visuals -->
+<div class="p-8 md:p-20 bg-surface-container-low flex flex-col justify-between">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="space-y-6">
+<h3 class="font-headline text-2xl font-bold tracking-tight">The Gallery</h3>
+<p class="font-body text-sm leading-relaxed text-on-surface-variant">
+                            842 Lexington Avenue<br/>
+                            Floor 12, Upper East Side<br/>
+                            New York, NY 10065
+                        </p>
+</div>
+<div class="space-y-6">
+<h3 class="font-headline text-2xl font-bold tracking-tight">Direct</h3>
+<p class="font-body text-sm leading-relaxed text-on-surface-variant">
+                            +1 (212) 555-0198<br/>
+                            concierge@monolith.arch<br/>
+                            @monolith.studio
+                        </p>
+</div>
+<div class="space-y-6">
+<h3 class="font-headline text-2xl font-bold tracking-tight">Gallery Hours</h3>
+<p class="font-body text-sm leading-relaxed text-on-surface-variant">
+                            Mon — Fri: 09:00 - 18:00<br/>
+                            Sat: By Appointment Only<br/>
+                            Sun: Closed
+                        </p>
+</div>
+</div>
+<!-- Featured Image / Texture -->
+<div class="mt-20 relative aspect-video overflow-hidden group">
+<img alt="High-end architectural office interior" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist luxury architectural office interior with marble desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8EHlZQNFqyiMfcq8EDoAwKl1mxaX563Q79r731xihgWuEB7ZfaRg3nSWt-ZMSotatX1fTbfO93_iPEhF5JZ2NcLf5tfKLhxExQLnVwKZ4aF-9HMG0bDF_xz1AX2tm2YpjLD1fl1lzijIPc9L0e49AMJKaRFeCDc22hU12CpcgWzT1yok4lIL7gbsgqS7lAxeDnJpC4P4ouL6_2X7YZVXsc1bK6fzMBChKrhpdMBGPOcTvabx59IkR2wn6-UMVN0Ms5FDWOXoKQq8"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="w-full h-[600px] bg-surface-container relative overflow-hidden">
+<div class="absolute inset-0 grayscale opacity-80 mix-blend-luminosity">
+<img alt="Minimalist map of New York City" class="w-full h-full object-cover" data-alt="Minimalist grey scale map of New York City" data-location="New York City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0vwYj0M0W6o3Pz5xT4uDkaxsqoshW0yiqEHUmSF8PrxGLEFzvonnYeOGuwWo8WA30rbJWo4PXIM_jH0gvM56Ll3rfX83K9E3uOlYKB5wISaakCHsaYUrzwRCRqazA01ucsdWefti58j7C9YmKaoZ7NknZ8C-4Ss-YUkk04qvHsYzQoTzlAsy33K90olzIuzKVSyK0hIuEVqj19f-lSnhIXVAEnEOhk2cQ7ngYbrWQK_x7Hw9A_PfBVAB2IG0gP_0r3B8mtw3LzuU"/>
+</div>
+<!-- Map Overlay Card -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:left-20 md:translate-x-0 bg-white/90 backdrop-blur-md p-10 max-w-sm shadow-xl">
+<span class="material-symbols-outlined text-primary mb-4 block" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h4 class="font-headline text-xl font-bold mb-2">Lexington Avenue Studio</h4>
+<p class="text-sm text-on-surface-variant mb-6">Our flagship design gallery is located in the heart of the architectural district.</p>
+<a class="font-label text-xs tracking-widest uppercase border-b border-primary pb-1 inline-block" href="#">View on Google Maps</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-zinc-200 bg-zinc-50">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="font-serif text-xl tracking-tighter text-zinc-900">MONOLITH</div>
+<p class="font-body text-xs tracking-widest uppercase text-zinc-500 leading-relaxed">
+                    © 2024 Architectural Monolith. All rights reserved.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label text-xs tracking-widest uppercase text-zinc-900 font-bold">Navigation</h4>
+<div class="flex flex-col space-y-2">
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 hover:text-zinc-900 transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 hover:text-zinc-900 transition-colors duration-300" href="#">Terms of Service</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 hover:text-zinc-900 transition-colors duration-300" href="#">Newsletter</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label text-xs tracking-widest uppercase text-zinc-900 font-bold">Social</h4>
+<div class="flex flex-col space-y-2">
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 hover:text-zinc-900 transition-colors duration-300" href="#">Instagram</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 hover:text-zinc-900 transition-colors duration-300" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
